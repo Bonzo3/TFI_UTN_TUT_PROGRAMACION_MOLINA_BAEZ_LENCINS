@@ -33,8 +33,8 @@ def validar(comando):
         if cantidad_argumentos != 0:
             return "Una consulta no lleva argumentos"
         
-        elif cantidad_argumentos != 1:
-            return "Una orden debe llevar un solo argumento"
+    elif cantidad_argumentos != 1:
+        return "Una orden debe llevar un solo argumento"
 
     
 

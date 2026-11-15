@@ -161,15 +161,16 @@ def con_unidad(valor, unidad):
 
 
 
+if __name__ == "__main__":
 
-texto ="1.000000E+03"
-texto2 = "Hola mamá"
-texto3 ="1.000000E+06"
-texto4 ="1.000000E+09"
-texto5 ="1.000000E+12"
-print(a_numero(texto))
-print(a_numero(texto2))
+    texto ="1.000000E+03"
+    texto2 = "Hola mamá"
+    texto3 ="1.000000E+06"
+    texto4 ="1.000000E+09"
+    texto5 ="1.000000E+12"
+    print(a_numero(texto))
+    print(a_numero(texto2))
 
-#print(con_unidad(250000000000, "Hz"))
-#print(con_unidad(25000000, "s"))
-print(con_unidad(0.99999999, "Hz"))
+    #print(con_unidad(250000000000, "Hz"))
+    #print(con_unidad(25000000, "s"))
+    print(con_unidad(0.99999999, "Hz"))

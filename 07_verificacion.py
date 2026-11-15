@@ -42,10 +42,15 @@ def verificar_canal(filas, canal):
         "coincide": coincide(vrms_medido, teorico),
     }  
 
-
 if __name__ == "__main__":
-    instrumento1 = cliente.Instrumento()
-    filas = barrido.barrer(instrumento1, ["CH1", "CH2"])
-
-    print(verificar_canal(filas, "CH1"),sep='\n')
-    print(verificar_canal(filas, "CH2"),sep='\n')
+    #instrumento1 = cliente.Instrumento()
+    #filas = barrido.barrer(instrumento1, ["CH1", "CH2"])
+    filas_prueba = [
+    {"canal": "CH1", "magnitud": "PKPK", "valor": 2.0},
+    {"canal": "CH1", "magnitud": "CYCRms", "valor": 1.0},
+]
+    # ---- pruebas sin conexión al servidor ----
+    assert abs(vrms_teorico(2.0) - 0.7071067811865475) < 1e-12
+    assert coincide(0.71, vrms_teorico(2.0)) is True
+    assert verificar_canal(filas_prueba, "CH1")["coincide"] is False
+    print("pruebas OK")
